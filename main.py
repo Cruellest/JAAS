@@ -1,10 +1,9 @@
 import json
 import os
 import tempfile
-import shutil  # Importe a biblioteca shutil para apagar diretórios
+import shutil  
 from typing import Dict
 
-# Adicione BackgroundTasks à sua lista de imports do FastAPI
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException, BackgroundTasks
 from fastapi.responses import FileResponse
 from starlette import status
