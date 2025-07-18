@@ -2,6 +2,8 @@
 
 Proof of concept, using jinja as an external service decoupled from any code to generate docx documents.
 
+> Demo: https://jaas.cruellest.net
+
 #### How to use:
 
 ##### Generate document based on docx template
