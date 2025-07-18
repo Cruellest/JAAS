@@ -2,8 +2,8 @@ from fastapi import APIRouter, UploadFile, File, Form, BackgroundTasks, HTTPExce
 from fastapi.responses import FileResponse
 from fastapi import status
 from pydantic import BaseModel
-from services.document_service import gerar_documento_docx, listar_variaveis_template_service
-from core.exceptions import InvalidContextJSON
+from app.services.document_service import gerar_documento_docx, listar_variaveis_template_service
+from app.core.exceptions import InvalidContextJSON
 
 router = APIRouter()
 

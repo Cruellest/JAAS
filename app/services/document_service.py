@@ -4,8 +4,8 @@ from fastapi import UploadFile, BackgroundTasks
 from fastapi.responses import FileResponse
 from docxtpl import DocxTemplate
 
-from core.exceptions import InvalidContextJSON
-from utils.file_utils import create_temp_dir, save_upload_file, remove_dir
+from app.core.exceptions import InvalidContextJSON
+from app.utils.file_utils import create_temp_dir, save_upload_file, remove_dir
 
 
 async def gerar_documento_docx(
