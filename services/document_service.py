@@ -37,3 +37,12 @@ async def gerar_documento_docx(
     except Exception as e:
         remove_dir(temp_dir)
         raise e
+
+async def listar_variaveis_template_service(template_file: UploadFile):
+    temp_dir = create_temp_dir()
+    try:
+        path = await save_upload_file(template_file, temp_dir)
+        doc = DocxTemplate(path)
+        return {"variaveis": list(doc.get_undeclared_template_variables({}))}
+    finally:
+        remove_dir(temp_dir)
